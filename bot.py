@@ -1,4 +1,5 @@
 import discord
+import os
 from discord import app_commands
 from discord.ext import commands
 from yt_dlp import YoutubeDL
@@ -158,4 +159,4 @@ async def on_disconnect():
     for vc in bot.voice_clients:
         await vc.disconnect()
 
-bot.run("MTMxNjU4MTI5MjcwNzU0NTE3OA.GAC8Id.zKuomzkfmyBg2iqYJtlr9NtTSiUL8uZRuuZnUI")
+bot.run(os.getenv("DISCORD_BOT_TOKEN"))
